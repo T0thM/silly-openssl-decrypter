@@ -9,6 +9,6 @@ CIPHER="aes-256-cbc"
 # Silly solution, but working (tested on CTF machine)
 # Needed to get rid of CRLF line endings with dos2unix
 
-for i in $(cat $wordwar | dos2unix); do echo -e "\nTesting password: $i"; openssl $CIPHER -d -a -in $enc_file -pass pass:$i | grep -i -E '[A-Za-z0-9]{3,30}';done < $wordvar 2>/dev/null | grep -v -i -E 'testing|binary' | grep -v "^$"
+for i in $(cat $wordwar | dos2unix); do echo -e "\nTesting password: $i"; openssl $CIPHER -d -a -in $enc_file -pass pass:$i | grep -i -E '[A-Za-z0-9]{3,30}';done 2>/dev/null | grep -v -i -E 'testing|binary' | grep -v "^$"
 
 exit 0
