@@ -32,7 +32,7 @@ then
 	usage
 else
 	echo -e "\nStarting bruteforce\n"	
-	array=($(for i in $(cat $wordvar);do openssl aes-256-cbc -d -a -in $encfile -pass pass:$i 2>&1 | grep -q 'error' || echo -e $i;done))
+	array=($(for i in $(cat $wordvar | dos2unix);do openssl aes-256-cbc -d -a -in $encfile -pass pass:$i 2>&1 | grep -q 'error' || echo -e $i;done))
 
 
 
