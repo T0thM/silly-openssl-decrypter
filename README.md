@@ -6,4 +6,4 @@ The initial idea was inspired by a CTF machine (Hawk@HackTheBox). The code is (s
 
 ### Usage
 
-Usage: ./silly_openssl_decrypter.sh wordlist openssl_encrypted_file
+Usage: `./silly_openssl_decrypter.sh wordlist openssl_encrypted_file`
