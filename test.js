@@ -1,1 +1,1 @@
-<input onmouseover=alert(1)>
+<input name="test" onmouseover=alert(1)>
